@@ -16,8 +16,11 @@
   Declarar propriedades ou métodos de uma classe como estáticos faz deles acessíveis sem a necessidade de instanciar a classe. Um membro declarados como estático não pode ser acessado com um objeto instanciado da classe (embora métodos estáticos podem).
 
 # Construt()
+  O PHP 5 permite aos desenvolvedores declararem métodos construtores para as classes. Classes que tem um método construtor, chamam o método a cada objeto recém criado, sendo apropriado para qualquer inicialização que o objeto necessite antes de ser utilizado.
 
 # Destruct()
+  O PHP 5 introduz um conceito de destrutor similar ao de outras linguagens orientadas a objeto, como C++. O método destrutor será chamado assim que todas as referências a um objeto particular forem removidas ou quando o objeto for explicitamente destruído ou qualquer ordem na sequência de encerramento.
 
 # toString()
+  Retorna uma string.
 
