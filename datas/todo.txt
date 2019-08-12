@@ -1,0 +1,19 @@
+## TRABALHANDO COM DATAS ##
+
+# Date(), Time()
+  date — Formata a data e a hora local,
+  time — Retorna o timestamp Unix atual
+
+# setlocale()
+  setlocale — Define informações locais
+
+# strftime()
+  strftime — Formata uma hora/data de acordo com as configurações locais
+
+# classe datetime()  
+  Representação de data e hora, para instanciar uma classe utilizados o (new)
+  exemplo: $dt = new DateTime();
+
+# DateInterval
+  Representa um intervalo entre datas. Um intervalo de data armazena, tanto uma quantidade de tempo (em anos, meses, dias, horas, etc), quanto uma string de tempo relativo no formato que o construtor da classe DateTime possui suporte.
+

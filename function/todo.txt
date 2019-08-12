@@ -1,0 +1,24 @@
+# APRENDIZADO SOBRE FUNCOES
+
+## User Function
+  São funcoes que sao criadas pelo usuario, podendo conter logica totalmente complexa.
+
+## Parameter Function
+  Informações podem ser passadas para funções através da lista de argumentos, que é uma lista de expressões delimitados por vírgulas. Os argumentos são avaliados da esquerda para a direita.
+
+## Function value x Reference
+  Por referência (padrão)
+    Quando você passa um argumento por referência, passa um ponteiro para o valor na memória. A função opera no argumento. Quando uma função altera o valor de um argumento passado por referência, o valor original é alterado.
+
+  Por valor
+    Quando você passa um argumento por valor, você passa uma cópia do valor na memória. A função opera na cópia. Isso significa que quando uma função altera o valor de um argumento passado por valor, o efeito é local para essa função, a cópia muda, mas o valor original na memória não é afetado.
+
+## Novidades do PHP 7  
+  # Declaração de tipos escalares
+    Declaração de tipos escalares vem em dois sabores: coercivo (padrão) e restrito. Para parâmetros, os seguintes tipos podem ser forçados (tanto coercivamente quanto rigorosamente): strings (string), inteiros (int), números ponto-flutuante (float), e booleanos (bool). Eles incrementam os tipos introduzidos no PHP 5: nomes de classe, interfaces, array e callable.
+
+## Function recursive  
+  Uma função recursiva é uma função que chama a si mesma. Cuidado deve ser tomado no PHP, no entanto, como seu código não deve realizar um certo número de chamadas de função recursiva. Ex .: Deve haver um mecanismo (instrução IF, etc) que interrompa a recursão após o resultado desejado ter sido encontrado. Se você permitir que sua função realize uma quantidade ilimitada de chamadas (e você tenha o XDebug instalado), você receberá o erro: "Erro fatal: nível máximo de aninhamento de função de '100' alcançado, abortando!"
+
+## Funcão Aninima
+  Funções anonimas, também conhecidas como closures, permitem a criação de funções que não tem o nome especificado. Elas são mais úteis como o valor de parâmetros callback, mas podem tem vários outros usos.    

@@ -1,0 +1,22 @@
+# SESSION
+
+## Session start
+session_start();
+
+## unset();
+Limpar a session do navegador
+
+## destroy();
+Destrei as session registradas no navegador
+
+## session_id();
+Retorna o ID fornecido no registro da sessao
+
+## session_regenerete_id();
+Cria um novo ID, assim que a sessao e atualizada
+
+## session_save_path();
+Retorna o caminho especifico do nosso documento
+
+## session_status();
+Retorna o status da nossa sessao
