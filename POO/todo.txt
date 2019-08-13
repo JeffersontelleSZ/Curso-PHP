@@ -24,3 +24,5 @@
 # toString()
   Retorna uma string.
 
+# Encapsulamento  
+
