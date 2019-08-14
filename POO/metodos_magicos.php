@@ -1,12 +1,12 @@
 <?php
-## Metodos Magicos
+// Metodos Magicos
 class Endereco
 {
   private $logradouro;
   private $numero;
   private $cidade;
 
-  # construct
+  // construct
   public function __construct($a, $b, $c)
   {
     $this->logradouro = $a;
@@ -14,13 +14,13 @@ class Endereco
     $this->cidade = $c;
   }
 
-  # destruct
+  // destruct
   public function __destruct()
   {
     var_dump('DESTRUIU..');
   }
 
-  # toString
+  // toString
   public function __toString()
   {
     return "Meu endereco é $this->logradouro é meu numero é $this->numero e minha cidade é $this->cidade";

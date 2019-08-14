@@ -5,7 +5,7 @@ class Carro
   private $motor;
   private $ano;
 
-  # Métodos getter e setter
+  // Métodos getter e setter
   public function getModelo()
   {
     return $this->modelo;

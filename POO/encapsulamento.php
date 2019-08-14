@@ -1,5 +1,5 @@
 <?php
-## encapsulamento
+// ENCAPSULAMENTO
 class Pessoa
 {
   public $nome = 'Jefferson Teles';
@@ -14,6 +14,7 @@ class Pessoa
   }
 }
 
+// EXTENDS PESSOA
 class Programador extends Pessoa
 {
   public function verDados()

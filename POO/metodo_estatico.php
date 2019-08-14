@@ -1,5 +1,5 @@
 <?php
-# Método Estatico
+// Método Estatico
 class Documento
 {
   private $numero;

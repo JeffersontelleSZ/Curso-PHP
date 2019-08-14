@@ -1,30 +1,34 @@
 <?php
-## HERANÇA
-class Pai
+// HERANÇA
+class Documento
 {
-  public $nome = 'Joao';
-  public $sobrenome = 'Teles';
-  private $idade = 45;
+  private $numero;
 
-  public function dados()
+  public function getNumero()
   {
-    echo $this->nome . '<br>';
-    echo $this->sobrenome . '<br>';
-    echo $this->idade;
+    return $this->numero;
+  }
+
+  public function setNumero($n)
+  {
+    $this->numero = $n;
   }
 }
 
-class Filho extends Pai
+// CPF EXTENDS
+class CPF extends Documento
 {
-  public $nome = 'Jeff';
 
-  public function dados()
+  public function validar(): bool
   {
-    echo $this->nome . '<br>';
-    echo $this->sobrenome . '<br>';
-    echo $this->idade;
+    $numeroCpf = $this->getNumero();
+
+    return true;
   }
 }
 
-$pessoa = new Filho();
-echo $pessoa->dados();
+$doc = new CPF();
+$doc->setNumero('04208165189');
+var_dump($doc->validar());
+echo '<br>';
+echo $doc->getNumero();

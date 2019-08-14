@@ -1,19 +1,19 @@
 <?php
-# Class
+// Class
 class Pessoa
 {
-  # Atributo
+  // Atributo
   public $nome;
   public $idade;
 
-  # Método
+  // Método
   public function falar()
   {
     return "Meu nome é $this->nome e tenho $this->idade";
   }
 }
 
-# Chamando nossa class
+// Chamando nossa class
 $pessoa = new Pessoa();
 $pessoa->nome = 'Jefferson Teles';
 $pessoa->idade = 25;
