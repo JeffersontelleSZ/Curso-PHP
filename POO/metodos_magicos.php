@@ -1,6 +1,5 @@
 <?php
 ## Metodos Magicos
-
 class Endereco
 {
   private $logradouro;
@@ -18,7 +17,7 @@ class Endereco
   # destruct
   public function __destruct()
   {
-    //var_dump('DESTRUIU..');
+    var_dump('DESTRUIU..');
   }
 
   # toString

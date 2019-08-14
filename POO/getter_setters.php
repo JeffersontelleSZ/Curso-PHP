@@ -1,6 +1,4 @@
 <?php
-# Get e Set
-
 class Carro
 {
   private $modelo;
