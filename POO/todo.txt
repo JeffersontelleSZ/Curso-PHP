@@ -24,8 +24,24 @@
 # toString()
   >> Retorna uma string.
 
+# get_class()  
+  >> Retorna o nome da classe de um objeto.
+
 # Encapsulamento
-  >> get_class();
+  >> Uma classe é uma estrutura que contém um conjunto de dados, um conjunto de operações e tem implementado as funcionalidade necessárias para a correta manipulação das informações.
 
 # Herança
+  >> A herança representa uma das principais características da Orientação a Objetos, até porque, somos capazes de implementar tipos de dados hierarquicamente. Através do conceito de herança, conseguimos implementar classes de uso geral, que possuam características comuns a várias entidades relacionadas.
+
+# Interface 
+  >> Interfaces de objetos permitem a criação de códigos que especificam quais métodos uma classe deve implementar, sem definir como esses métodos serão tratados.
+
+  Interfaces são definidas da mesma forma que classes, mas com a palavra-chave interface substituindo class e com nenhum dos métodos tendo seu conteúdo definido.
+
+  Todos os métodos declarados em uma interface devem ser públicos, essa é a natureza de uma interface.
+
+# Implements
+  >> Para implementar uma interface, o operador implements é utilizado. Todos os métodos na interface devem ser implementados na classe, não fazê-lo resultará em um erro fatal. Classes podem implementar mais de uma interface se assim for desejado, separando cada interface com uma vírgula.  
+
+# class Abstract
 
