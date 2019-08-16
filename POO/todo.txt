@@ -33,6 +33,9 @@
 # Herança
   >> A herança representa uma das principais características da Orientação a Objetos, até porque, somos capazes de implementar tipos de dados hierarquicamente. Através do conceito de herança, conseguimos implementar classes de uso geral, que possuam características comuns a várias entidades relacionadas.
 
+# Polimorfirsmo
+  >> Polimorfismo é a capacidade que uma classe tem de sobrepor métodos da classe abstrata, modificando-os. Para tanto, é necessário que ela possua a mesma assinatura de método.
+
 # Interface 
   >> Interfaces de objetos permitem a criação de códigos que especificam quais métodos uma classe deve implementar, sem definir como esses métodos serão tratados.
 
@@ -43,5 +46,8 @@
 # Implements
   >> Para implementar uma interface, o operador implements é utilizado. Todos os métodos na interface devem ser implementados na classe, não fazê-lo resultará em um erro fatal. Classes podem implementar mais de uma interface se assim for desejado, separando cada interface com uma vírgula.  
 
-# class Abstract
+# Class Abstract
+  >> O PHP 5 introduz métodos e classes abstratas. Classes definidas como abstratas não podem ser instanciadas, e qualquer classe que contenha ao menos um método abstrato também deve ser abstrata. Métodos são definidos como abstratos declarando a intenção em sua assinatura - não podem definir a implementação.
+
+# Function Autoload  
 
