@@ -50,8 +50,15 @@
   >> O PHP 5 introduz métodos e classes abstratas. Classes definidas como abstratas não podem ser instanciadas, e qualquer classe que contenha ao menos um método abstrato também deve ser abstrata. Métodos são definidos como abstratos declarando a intenção em sua assinatura - não podem definir a implementação.
 
 # Function Autoload
+ >> tenta carregar a classe indefinida.
 
 # spl_autoload_register
+  >> Registra a função dada como implementação de __autoload()
+  
+  Registra a função na pilha de __autoload da SPL. Se a pilha ainda não estiver ativa, ela será ativada. Se nenhum parâmetro for passado, a implementação padrão spl_autoload será registrada. Quando o registro for bem sucedido, o retono é true, em caso de falha, será retornado false.
+
+  Se o seu código já possuir uma função __autoload, essa função deve ser registrada na pilha de __autoload explicitamente. Isso é necessário porque a spl_autoload_register() irá de fato substituir internamente a função de __autoload por spl_autoload() ou spl_autoload_call().
 
 # Namespace
+  >> O que são namespaces? Na definição mais ampla, os namespaces são uma maneira de encapsular itens. Isso pode ser visto como um conceito abstrato em muitos lugares. Por exemplo, em qualquer sistema operacional, os diretórios servem para agrupar arquivos relacionados e atuam como um namespace para os arquivos dentro deles. Como um exemplo concreto, o arquivo foo.txt pode existir tanto em diretório / home / greg como em / home / other , mas duas cópias de foo.txt não podem coexistir no mesmo diretório. Além disso, para acessar o arquivo foo.txt fora do diretório / home / greg , devemos prefixar o nome do diretório ao nome do arquivo usando o separador de diretório para obter /home/greg/foo.txt. Esse mesmo princípio se estende a namespaces no mundo da programação.
 
