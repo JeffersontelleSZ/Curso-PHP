@@ -32,10 +32,15 @@ O MySQL é um sistema de gerenciamento de banco de dados, que utiliza a linguage
  > DROP
     DROP TABLE nome_tabela;
 
-# INSERT
+# INSERT - Enserindo conteudo nas colunas
   INSERT INTO nome_tabela(nomes_dados)VALUE(valor_dados);
 
-# SELECT  
+# SELECT - Selecionando colunas na tabela  
+  SELECT <COLUNA> FROM <TABELA>;
+
+# WHERE - Filtrando registros
+  SELECT <COLUNA> FROM <TABELA> WHERE <COLUMN> <= VALOR;
+
 
 
 
