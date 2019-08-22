@@ -3,9 +3,10 @@
 > Help with SQL commands to interact with a MySQL database
 
 ## MySQL Locations
-* Mac             */usr/local/mysql/bin*
-* Windows         */Program Files/MySQL/MySQL _version_/bin*
-* Xampp           */xampp/mysql/bin*
+
+- Mac _/usr/local/mysql/bin_
+- Windows _/Program Files/MySQL/MySQL *version*/bin_
+- Xampp _/xampp/mysql/bin_
 
 ## Add mysql to your PATH
 
@@ -178,6 +179,7 @@ ALTER TABLE users MODIFY COLUMN age INT(3);
 ```sql
 SELECT * FROM users ORDER BY last_name ASC;
 SELECT * FROM users ORDER BY last_name DESC;
+SELECT * FROM users WHERE age BETWEEN 20 AND 50 ORDER BY age ASC;
 ```
 
 ## Concatenate Columns
