@@ -223,6 +223,12 @@ SELECT * FROM users WHERE dept NOT LIKE 'd%';
 SELECT * FROM users WHERE dept IN ('design', 'sales');
 ```
 
+## LIMIT (OFFSET)
+
+```sql
+SELECT * FROM user LIMIT 4, 3;
+```
+
 ## Create & Remove Index
 
 ```sql
@@ -315,11 +321,12 @@ ORDER BY posts.title;
 ## Aggregate Functions
 
 ```sql
-SELECT COUNT(id) FROM users;
-SELECT MAX(age) FROM users;
-SELECT MIN(age) FROM users;
-SELECT SUM(age) FROM users;
-SELECT UCASE(first_name), LCASE(last_name) FROM users;
+SELECT COUNT(id) FROM users; /* Numero de linhas */
+SELECT MAX(age) FROM users; /* Maximo */
+SELECT MIN(age) FROM users; /* Minimo */
+SELECT SUM(age) FROM users; /* Soma */
+SELECT AVG(age) FROM users WHERE last_name; /* Média */
+SELECT UCASE(first_name), LCASE(last_name) FROM users; /* UCASE - UPPERCASE, LCASE - LOWERCASE */
 
 ```
 
