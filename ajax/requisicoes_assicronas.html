@@ -17,6 +17,8 @@
       function requisitarPagina(url) {
         const ajax = new XMLHttpRequest();
 
+        document.getElementById("conteudo").innerHTML = "";
+
         if (!document.getElementById("loading")) {
           const imgLoading = document.createElement("img");
           imgLoading.id = "loading";
@@ -35,9 +37,16 @@
 
         // Para ficar olhando o progresso da requisição.
         ajax.onreadystatechange = () => {
-          if (ajax.readyState == 4) {
-            console.log("Requisicao atribuida com sucesso");
-            document.getElementById("loading").remove();
+          if (ajax.readyState == 4 && ajax.status == 200) {
+            document.getElementById("conteudo").innerHTML = ajax.responseText;
+            //document.getElementById("loading").remove();
+          }
+
+          // Error 404
+          if (ajax.readyState == 4 && ajax.status == 404) {
+            document.getElementById("conteudo").innerHTML =
+              "Requisicao finalizada, mais nao possui arquivo com esse nome";
+            //document.getElementById("loading").remove();
           }
         };
 

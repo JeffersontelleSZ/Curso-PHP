@@ -72,3 +72,20 @@ Status
 404: "Not Found"
 
 **Propriedade: statusTest** - Retorna o texto de status (por exemplo, "OK" ou "Não encontrado")
+
+# Loading
+
+```javascript
+// Lógica para carregar o arquivo e quando ele for carregado ser removido assim que a requisição for finalizada.
+if (!document.getElementById("loading")) {
+  const loadImg = document.createElement("img"); // Criar um elemento html para receber uma img
+  loadImg.id = "loading"; // criar um id
+  loadImg.src = "nome_do_arquivo.gif"; // Local que se incontra o arquivo a ser carregado
+  loading.className = "rounded mx-auto d-block"; // classe css para centralizar o arquivo a ser carregado
+}
+
+// Quando fazer a requisição o arquivo de loading tem um tempo para ser removido.
+ajax.onreadystatechange = () => {
+  document.getElementById("loading").remove();
+};
+```
