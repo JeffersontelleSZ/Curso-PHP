@@ -17,17 +17,28 @@
       function requisitarPagina(url) {
         const ajax = new XMLHttpRequest();
 
+        if (!document.getElementById("loading")) {
+          const imgLoading = document.createElement("img");
+          imgLoading.id = "loading";
+          imgLoading.src = "loading2.gif";
+          imgLoading.className = "rounded mx-auto d-block";
+          document.getElementById("conteudo").appendChild(imgLoading);
+        }
+
         // Requisição nao iniciada.
-        console.log(ajax.readyState);
+        //console.log(ajax.readyState);
 
         ajax.open("GET", url);
 
         // Conexão estabelecida com o servidor, state = 1
-        console.log(ajax.readyState);
+        //console.log(ajax.readyState);
 
         // Para ficar olhando o progresso da requisição.
         ajax.onreadystatechange = () => {
-          console.log(ajax.readyState);
+          if (ajax.readyState == 4) {
+            console.log("Requisicao atribuida com sucesso");
+            document.getElementById("loading").remove();
+          }
         };
 
         ajax.send();
@@ -52,7 +63,7 @@
           <a
             href="#"
             class="btn btn-primary"
-            onclick="requisitarPagina('pagina_1_conteudo.html')"
+            onclick="requisitarPagina('pagina_1_conteudo.php')"
             >Página 1</a
           >
           <a
@@ -74,7 +85,7 @@
       <div class="row">
         <div class="col-md-1"></div>
 
-        <div class="col-md-10"></div>
+        <div class="col-md-10" id="conteudo"></div>
 
         <div class="col-md-1"></div>
       </div>
