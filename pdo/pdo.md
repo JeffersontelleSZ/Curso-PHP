@@ -38,3 +38,29 @@ $conexao = new PDO($host, $user, $senha);
 ```
 
 ## Executar instruções SQL
+
+```sql
+
+$query = '
+  CREATE TABLE tb_usuarios (
+    id int not null primary key auto_increment,
+    nome varchar(100) not null,
+    email varchar(100) not null,
+    senha varchar(30) not null
+  )
+';
+
+$conexao->exec($query); /* return 0 */
+
+$query = '
+  INSERT INTO tb_usuarios(
+    nome, email, senha
+  ) VALUES (
+    "Jefferson", "test@teste.com", "123"
+  )
+';
+
+$conexao->exec($query); /* return 1 */
+```
+
+## PDOStentament Object (Query) com fetchAll
