@@ -10,23 +10,22 @@ try {
 
   // Executar estrucoes SQL
   $query = '
-    CREATE TABLE tb_usuarios (
-      id int not null primary key auto_increment,
-      nome varchar(50) not null,
-      email varchar(100) not null,
-      senha varchar(32) not null
-    )
+    SELECT * FROM tb_usuarios
   ';
 
-  $return = $conn->exec($query);
-  echo $return;
+  $stmt = $conn->query($query);
+  $list_user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $query = '
-      DELETE FROM tb_usuarios
-  ';
+  foreach ($list_user as $key => $value) {
+    print_r($value['nome']);
+    echo '<hr>';
+  }
 
-  $return = $conn->exec($query);
-  echo $return;
+  // echo '<pre>';
+  // print_r($user);
+  // echo '</pre>';
+
+  // echo $user['email'];
 } catch (PDOException $err) {
   echo 'Error: ' . $err->getCode() . ' Mensagem: ' . $err->getMessage();
 }

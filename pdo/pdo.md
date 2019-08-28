@@ -20,7 +20,7 @@ $conexao = new PDO($host, $user, $senha);
 
 ```
 
-## Tratando Exception (PDOException)
+## Tratando erros com Exception (PDOException)
 
 PDOExcpetion - Representa um erro levantado pelo PDO. Você não deve lançar uma PDOException do seu próprio código. Veja Exceções para mais informações sobre Exceções no PHP.
 **Link:** [Documentação PHP Exception](https://www.php.net/manual/pt_BR/class.pdoexception.php)
@@ -64,3 +64,36 @@ $conexao->exec($query); /* return 1 */
 ```
 
 ## PDOStentament Object (Query) com fetchAll
+
+Retorna uma matriz contendo todas as linhas do conjunto de resultados
+
+```sql
+
+$query = '
+  SELECT * FROM tb_usuarios
+';
+
+$stmt = $conexao->query($query);
+$list = $stmt->fetchAll();
+
+echo $list[1]['email']
+```
+
+## PDOStentament Object - fetchAll - Tipos de retorno
+
+PDO::FETCH_ASSOC
+PDO::FETCH_NUM
+PDO::FETCH_BOTH
+PDO::FETCH_OBJ
+
+```sql
+
+$query = '
+  SELECT * FROM tb_usuarios
+';
+
+$stmt = $conexao->query($query);
+$list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+echo $list[1]['email']
+```
