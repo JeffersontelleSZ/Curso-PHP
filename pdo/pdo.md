@@ -99,3 +99,37 @@ echo $list[1]['email']
 ```
 
 ## SQL Injection
+
+## Prepare Estentament
+
+```sql
+
+if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
+  $dns = 'mysql:host=localhost;dbname=php_com_pdo';
+  $user = 'root';
+  $senha = '';
+
+  try {
+    $conn = new PDO($dns, $user, $senha);
+
+    $query = "select * from tb_usuarios where";
+    $query .= " email = :usuario ";
+    $query .= " AND senha = :senha ";
+
+    $stmt = $conn->prepare($query);
+
+    $stmt->bindValue(':usuario', $_POST['usuario']);
+    $stmt->bindValue(':senha', $_POST['senha']);
+
+    $stmt->execute();
+
+    $usuario = $stmt->fetch();
+
+    echo '<pre>';
+    print_r($usuario);
+    echo '</pre>';
+  } catch (PDOException $err) {
+    echo 'Error: ' . $err->getCode() . ' Mensagem: ' . $err->getMessage();
+  }
+}
+```

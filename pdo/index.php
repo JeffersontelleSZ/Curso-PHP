@@ -9,14 +9,21 @@ if (!empty($_POST['usuario']) && !empty($_POST['senha'])) {
     $conn = new PDO($dns, $user, $senha);
 
     $query = "select * from tb_usuarios where";
-    $query .= " email = '{$_POST['usuario']}' ";
-    $query .= " AND senha = '{$_POST['senha']}' ";
+    $query .= " email = :usuario ";
+    $query .= " AND senha = :senha ";
 
-    echo $query;
+    $stmt = $conn->prepare($query);
 
-    $stmt = $conn->query($query);
+    $stmt->bindValue(':usuario', $_POST['usuario']);
+    $stmt->bindValue(':senha', $_POST['senha']);
+
+    $stmt->execute();
+
     $usuario = $stmt->fetch();
+
+    echo '<pre>';
     print_r($usuario);
+    echo '</pre>';
   } catch (PDOException $err) {
     echo 'Error: ' . $err->getCode() . ' Mensagem: ' . $err->getMessage();
   }
