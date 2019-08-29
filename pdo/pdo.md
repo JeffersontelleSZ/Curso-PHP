@@ -97,3 +97,5 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 echo $list[1]['email']
 ```
+
+## SQL Injection
